@@ -1,29 +1,33 @@
 import React from 'react'
 import { View, StyleSheet, Text } from 'react-native'
-import { color } from 'react-native-reanimated'
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+import { faBell } from '@fortawesome/free-solid-svg-icons'
 
 export default function NavBar() {
     return(
         <View style={styles.container}>
             <Text style={styles.navText}>OVO</Text>
-            <Text style={styles.navText}>Notif</Text>
+            <FontAwesomeIcon 
+                icon={ faBell } 
+                color={ 'white' }
+                size={ 24 }
+            />
         </View>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
         flexDirection: 'row',
-        backgroundColor: 'purple',
+        backgroundColor: '#6836bb',
         alignItems: 'center',
         justifyContent: 'space-between',
         padding: 10,
-        height: 200,
+        height: 50,
         width: '100%',
     },
     navText: {
         color: 'white',
-        fontSize: 12,
+        fontSize: 24,
     }
 })
