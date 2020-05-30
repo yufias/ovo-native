@@ -1,5 +1,7 @@
 import React from 'react'
 import { Text,StyleSheet, View, Platform, StatusBar } from 'react-native'
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+import { faPlusCircle,faArrowAltCircleUp, faHistory } from '@fortawesome/free-solid-svg-icons'
 import NavBar from './NavBar'
 
 export default function LandingPage() {
@@ -15,6 +17,32 @@ export default function LandingPage() {
                     <Text style={styles.pointsAmount}> 541.552</Text>
                 </Text>
             </View>
+            <View style={styles.action}>
+                <View style={styles.actionContent}>
+                    <FontAwesomeIcon 
+                        icon={ faPlusCircle } 
+                        color={ '#5b0e91' }
+                        size={ 24 }
+                    />
+                    <Text>Top Up</Text>
+                </View>
+                <View style={styles.actionContent}>
+                    <FontAwesomeIcon 
+                        icon={ faArrowAltCircleUp } 
+                        color={ '#5b0e91' }
+                        size={ 24 }
+                    />
+                    <Text>Transfer</Text>
+                </View>
+                <View style={styles.actionContent}>
+                    <FontAwesomeIcon 
+                        icon={ faHistory } 
+                        color={ '#5b0e91' }
+                        size={ 24 }
+                    />
+                    <Text>History</Text>
+                </View>
+            </View>
         </View>
     )
 }
@@ -26,7 +54,8 @@ const styles = StyleSheet.create({
     },
     cashPoints: {
         backgroundColor: '#5b0e91',
-        padding: 6,
+        // backgroundColor: '#6836bb',
+        padding: 12,
     },
     cashTitle: {
         margin: 2,
@@ -44,5 +73,18 @@ const styles = StyleSheet.create({
     },
     pointsAmount: {
         color: '#d9a005'
+    },
+    action: {
+        backgroundColor: '#d5d5d5',
+        borderRadius: 8,
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        margin: 16,
+        padding: 8,
+    },
+    actionContent: {
+        alignItems: 'center',
+        margin: 4,
     }
 })
