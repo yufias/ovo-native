@@ -15,12 +15,12 @@ export default function LandingPage() {
                 <Circle
                     cx="50"
                     cy="50"
-                    r="360"
+                    r="370"
                     fill="#6836bb"
                 >
                 </Circle>
                     <TextSvg
-                        x="-50"
+                        x="-45"
                         y="325"
                         textAnchor="middle"
                         fontWeight="bold"
@@ -30,7 +30,7 @@ export default function LandingPage() {
                         OVO Cash
                     </TextSvg>
                     <TextSvg
-                        x="-65"
+                        x="-60"
                         y="340"
                         textAnchor="middle"
                         fontWeight="bold"
@@ -40,7 +40,7 @@ export default function LandingPage() {
                         Rp
                     </TextSvg>
                     <TextSvg
-                        x="-32"
+                        x="-27"
                         y="347"
                         textAnchor="middle"
                         fontWeight="bold"
@@ -50,7 +50,7 @@ export default function LandingPage() {
                         11.260
                     </TextSvg>
                     <TextSvg
-                        x="-45"
+                        x="-40"
                         y="365"
                         textAnchor="middle"
                         fontWeight="bold"
@@ -60,7 +60,7 @@ export default function LandingPage() {
                         OVO Points
                     </TextSvg>
                     <TextSvg
-                        x="2"
+                        x="7"
                         y="365"
                         textAnchor="middle"
                         fontWeight="bold"
@@ -84,25 +84,25 @@ export default function LandingPage() {
                     <FontAwesomeIcon 
                         icon={ faPlusCircle } 
                         color={ '#5b0e91' }
-                        size={ 24 }
+                        size={ 28 }
                     />
-                    <Text>Top Up</Text>
+                    <Text style={styles.actionFont}>Top Up</Text>
                 </View>
                 <View style={styles.actionContent}>
                     <FontAwesomeIcon 
                         icon={ faArrowAltCircleUp } 
                         color={ '#5b0e91' }
-                        size={ 24 }
+                        size={ 28 }
                     />
-                    <Text>Transfer</Text>
+                    <Text style={styles.actionFont}>Transfer</Text>
                 </View>
                 <View style={styles.actionContent}>
                     <FontAwesomeIcon 
                         icon={ faHistory } 
                         color={ '#5b0e91' }
-                        size={ 24 }
+                        size={ 28 }
                     />
-                    <Text>History</Text>
+                    <Text style={styles.actionFont}>History</Text>
                 </View>
             </View>
         </View>
@@ -148,16 +148,24 @@ const styles = StyleSheet.create({
         color: '#d9a005'
     },
     action: {
-        backgroundColor: '#d5d5d5',
+        // backgroundColor: '#d5d5d5',
+        backgroundColor: 'white',
         borderRadius: 8,
         flexDirection: 'row',
         justifyContent: 'space-around',
         alignItems: 'center',
-        margin: 16,
-        padding: 8,
+        margin: 18,
+        padding: 10,
+        top: -65,
+        position: 'relative',
+        overflow: 'hidden'
     },
     actionContent: {
         alignItems: 'center',
         margin: 4,
+    },
+    actionFont: {
+        color: '#5b0e91',
+        fontSize: 14
     }
 })
